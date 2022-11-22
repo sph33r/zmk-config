@@ -21,10 +21,11 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+    };
+
         &caps_word {
                 mods = <LSFT | RSHFT>;
         };
-    };
 
         keymap {
                 compatible = "zmk,keymap";
