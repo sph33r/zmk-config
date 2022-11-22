@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&caps_word {
+        mods = <LSFT | RSHFT>;
+};
+
 / {
 
      behaviors {
@@ -22,10 +26,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
-        &caps_word {
-                mods = <LSFT | RSHFT>;
-        };
 
         keymap {
                 compatible = "zmk,keymap";
