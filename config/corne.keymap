@@ -10,7 +10,6 @@
 
 
 &caps_word {
-    mods = <(MOD_LSFT | MOD_RSFT)>;
     continue-list = <UNDERSCORE MINUS>;
 };
 
