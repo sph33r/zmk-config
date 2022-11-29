@@ -20,7 +20,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
-};
 
         keymap {
                 compatible = "zmk,keymap";
