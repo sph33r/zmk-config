@@ -10,7 +10,6 @@
 
 / {
 
-/ {
     behaviors {
         tdesc: tilde_escape {
             compatible = "zmk,behavior-mod-morph";
