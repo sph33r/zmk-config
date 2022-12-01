@@ -21,10 +21,8 @@
 	td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping-term-ms = <190>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
@@ -33,24 +31,24 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  BKSP |
 // | td   |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |   '   |
 // | TDESC|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |RETSHFT|
 //                    | GUI | LWR | SHFT|   | SPC | RSE  |LALT |
                         bindings = <
-   &kp TAB                &kp Q  &kp W  &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &td LCTRL CAPSLOCK     &kp A  &kp S  &kp D  &kp F &kp G   &kp H &kp J  &kp K  &kp L  &kp SEMI &kp SQT
-   &tdesc                 &kp Z  &kp X  &kp C &kp V &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
-                              &kp LGUI  &mo 1  &kp LSHFT   &kp SPC  &mo 2  &kp LALT
+   &kp TAB            &kp Q  &kp W  &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &td LCTRL CAPS     &kp A  &kp S  &kp D  &kp F &kp G   &kp H &kp J  &kp K  &kp L  &kp SEMI &kp SQT
+   &tdesc             &kp Z  &kp X  &kp C &kp V &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+                                &kp LGUI  &mo 1  &kp LSHFT   &kp SPC  &mo 2  &kp LALT
                         >;
                 };
 
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |   `  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  DEL |
-// |      |     |     |     |  _  |  -  |   | "|" |  [  |  ]  |     |     |      |
-// |      |     |     |     |  =  |  +  |   |  \  |  {  |  }  |     |     |      |
+// ---------------------------------------------------------------------------------
+// |   `  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |   DEL  |
+// |      |     |     |     |  _  |  -  |   | "|" |  [  |  ]  |     |     |        |
+// |      |     |     |     |  =  |  +  |   |  \  |  {  |  }  |     |     |        |
 //                    |     |     |     |   |     | ADJ |     |
                         bindings = <
    &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET  &kp AMPS  &kp STAR &kp LPAR  &kp RPAR  &kp DEL
@@ -61,10 +59,10 @@
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |     |     |     |     | HOME| END |   | LFT | DOWN| UP  |RIGHT|     |      |
-// |     |     |     |     |     | PRSC|   | PGUP| PGDN|     |     |     |      |
+// --------------------------------------------------------------------------------
+// |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |        |
+// |     |     |     |     | HOME| END |   | LFT | DOWN| UP  |RIGHT|     |        |
+// |     |     |     |     |     | PRSC|   | PGUP| PGDN|     |     |     |        |
 //                   |     | ADJ |     |   |     |     |     |
                         bindings = <
    &trans  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
@@ -75,15 +73,15 @@
                 };
 
                 adjust_layer {
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |VOLUP|   | BT0 | BT1 | BT2 | BT3 | BT4 |BTCLR |
-// |      |     |     |     |     |VOLDN|   |     |     |     |     |     |      |
-// |      |     |     |     |     |MUTE |   |RESET|     |     |     |     |      |
+// --------------------------------------------------------------------------------
+// |      |     |     |     |     |VOLUP|   | BT0 | BT1 | BT2 | BT3 | BT4 |       |
+// |      |     |     |     |     |VOLDN|   |BTCLR|     |     |     |     |       |
+// |      |     |     |     |     |MUTE |   |RESET|     |     |     |     |       |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &none  &none  &none  &none  &none  &kp K_VOL_UP      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &bt BT_CLR
-   &none  &none  &none  &none  &none  &kp K_VOL_DN      &none  &none  &none  &none  &none  &none
-   &none  &none  &none  &none  &none  &kp K_MUTE      &reset  &none  &none  &none  &none &none
+   &none  &none  &none  &none  &none  &kp K_VOL_UP      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &none
+   &none  &none  &none  &none  &none  &kp K_VOL_DN      &bt BT_CLR    &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &kp K_MUTE        &reset  &none  &none  &none  &none &none
                 &trans     &trans     &trans      &trans  &trans   &trans
                         >;
                 };                
