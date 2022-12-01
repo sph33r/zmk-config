@@ -20,7 +20,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	td: tapdance {
-            compatible = "zmk,behavior-hold-tap";
+            compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE";
             #binding-cells = <0>;
             tapping-term-ms = <190>;
