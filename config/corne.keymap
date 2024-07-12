@@ -59,15 +59,15 @@
 
         adjust_layer {
             // --------------------------------------------------------------------------------
-            // |      |     |     |     |     |VOLUP|   | BT0 | BT1 | BT2 | BT3 | BT4 |       |
-            // |      |     |     |     |     |VOLDN|   |BTCLR|     |     |     |     |       |
-            // |      |     |     |     |     |MUTE |   |RESET|     |     |     |     |       |
+            // |      |     |     |     |     |     |   |     |     |     |     |     |       |
+            // |      |     |     |     |     |     |   |BTCLR|BTNXT|BTPRV|     |     | RESET |
+            // |BTCLRA|     |     |VOLUP|VOLDN|MUTE |   | BT0 | BT1 | BT2 | BT3 | BT4 |       |
             //                    |     |     |     |   |     |     |     |
 
             bindings = <
-&bt BT_CLR_ALL &none &none &none &none &kp C_VOL_UP     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-&none          &none &none &none &none &kp C_VOL_DN     &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &none        &none        &none
-&none          &none &none &none &none &kp C_MUTE       &sys_reset   &none        &none        &none        &none        &none
+&none          &none &none &none         &none        &none        &none        &none        &none        &none        &none        &none
+&none          &none &none &none         &none        &none        &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &none        &none        &sys_reset
+&bt BT_CLR_ALL &none &none &kp KC_VOL_UP &kp C_VOL_DN &kp C_MUTE   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
                      &trans  &trans  &trans          &trans        &trans        &trans
             >;
         };
