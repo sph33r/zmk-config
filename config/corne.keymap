@@ -45,14 +45,14 @@
         raise_layer {
             // --------------------------------------------------------------------------------
             // |  ~  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |        |
-            // |     |     |     |     | HOME| END |   | LFT | DOWN| UP  |RIGHT|     |        |
+            // |     |     | HOME| PGDN| PGUP| END |   | LFT | DOWN| UP  |RIGHT|     |        |
             // |     |     |     |     |     | PRSC|   | PGUP| PGDN|     |     |     |        |
             //                   |     | ADJ |     |   |     |     |     |
 
             bindings = <
-&kp TILDE &kp N1 &kp N2 &kp N3 &kp N4    &kp N5        &kp N6    &kp N7    &kp N8 &kp N9    &kp N0 &kp DELETE
-&trans    &none  &none  &none  &kp HOME  &kp END       &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &trans &trans
-&trans    &none  &none  &none  &kp INS   &kp PSCRN     &kp PG_UP &kp PG_DN &trans &trans    &trans &trans
+&kp TILDE &kp N1 &kp N2    &kp N3   &kp N4    &kp N5        &kp N6    &kp N7    &kp N8 &kp N9    &kp N0 &kp DELETE
+&trans    &none  &kp HOME  &kp PGDN &kp PGUP  &kp END       &kp LEFT  &kp DOWN  &kp UP &kp RIGHT &trans &trans
+&trans    &none  &none     &none    &kp INS   &kp PSCRN     &none     &none     &trans &trans    &trans &trans
                      &trans  &mo 3       &trans           &trans     &trans     &trans
             >;
         };
@@ -60,15 +60,15 @@
         adjust_layer {
             // --------------------------------------------------------------------------------
             // |      |     |     |     |     |     |   |     |     |     |     |     |       |
-            // |      |     |     |     |     |     |   |BTCLR|BTNXT|BTPRV|     |     | RESET |
-            // |BTCLRA|     |     |     |     |     |   | BT0 | BT1 | BT2 | BT3 | BT4 |       |
+            // |      |     |     |     |     |     |   |     |     |     |     |     | RESET |
+            // |BTCLRA|     |     |     |BTCLR|     |   | BT0 | BT1 | BT2 | BT3 | BT4 |       |
             //                    |     |     |     |   |     |     |     |
 
             bindings = <
-&none          &none &none &none &none &none     &none        &none        &none        &none        &none        &none
-&none          &none &none &none &none &none     &bt BT_CLR   &bt BT_NXT   &bt BT_PRV   &none        &none        &sys_reset
-&bt BT_CLR_ALL &none &none &none &none &none     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-                     &trans  &trans  &trans       &trans        &trans        &trans
+&none          &none &none &none &none &none       &none        &none        &none        &none        &none        &none
+&none          &none &none &none &none &none       &none        &none        &none        &none        &none        &sys_reset
+&bt BT_CLR_ALL &none &none &none &none &kp BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+                     &trans  &trans  &trans        &trans        &trans        &trans
             >;
         };
     };
