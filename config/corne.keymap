@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE PERIOD COMMA>;
+};
+
+
 / {
     behaviors {
         hml: homerow_mods_left {
@@ -35,9 +40,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
         };
-        &caps_word {
-            continue-list = <UNDERSCORE MINUS BACKSPACE PERIOD COMMA>;
-        };
+
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
