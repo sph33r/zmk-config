@@ -56,6 +56,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display_name = "WIN";
             bindings = <
 &gresc     &kp Q  &kp W        &kp E          &kp R         &kp T        &kp Y      &kp U         &kp I          &kp O        &kp P     &kp BSPC
 &kp TAB    &kp A  &hml LALT S  &hml LSHIFT D  &hml LCTRL F  &kp G        &kp H      &hmr RCTRL J  &hmr RSHIFT K  &hmr RALT L  &kp SEMI  &kp SQT
@@ -65,6 +66,7 @@
         };
 
         lower_layer {
+            dislay_name = "SYM";
             bindings = <
 &kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
 &trans     &none     &none   &none     &kp UNDER  &kp MINUS    &kp PIPE   &kp LBKT  &kp RBKT  &none     &none     &none
@@ -74,6 +76,7 @@
         };
 
         raise_layer {
+            display_name = "NUM";
             bindings = <
 &kp GRAVE  &kp N1  &kp N2    &kp N3         &kp N4       &kp N5       &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &kp DELETE
 &trans     &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
@@ -83,6 +86,7 @@
         };
 
         adjust_layer {
+            display_name = "BT";
             bindings = <
 &none           &none  &none  &none   &none   &none         &none         &none         &none         &none         &none         &none
 &none           &none  &none  &none   &none   &none         &none         &none         &none         &none         &none         &sys_reset
