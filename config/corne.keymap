@@ -36,6 +36,7 @@
             hold-trigger-on-release;
         };
     };
+};
     
 / {
     keymap {
