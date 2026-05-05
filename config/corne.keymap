@@ -48,6 +48,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&caps_word>;
         };
+    };
 };
     
 / {
